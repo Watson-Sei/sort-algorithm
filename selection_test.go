@@ -1,22 +1,20 @@
 package main
 
-import (
-	"testing"
-)
+import "testing"
 
-func BubbleSum(numbers []int) (sum int) {
-	for i := 0; i < len(numbers); i ++ {
+func SelectionSum(numbers []int) (sum int) {
+	for i := 0; i < len(numbers); i++ {
 		sum += numbers[i]
 	}
 	return
 }
 
-func TestBubble(t *testing.T) {
+func TestSelection(t *testing.T) {
 	expect := []int{2, 7, 12, 34, 99}
-	actual := bubble([]int{99, 12, 2, 34, 7})
+	actual := selection([]int{99, 12, 2, 34, 7})
 
-	got := BubbleSum(actual)
-	want := BubbleSum(expect)
+	got := SelectionSum(actual)
+	want := SelectionSum(expect)
 
 	// 配列と配列の比較ができないので、Sumの合計を数値で出し比較する
 	if want != got {

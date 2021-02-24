@@ -1,9 +1,5 @@
 package main
 
-import (
-	"fmt"
-)
-
 // バブルソート
 func bubble(array []int) []int {
 	for i := 0; i < len(array) - 1; i++ {
@@ -15,9 +11,4 @@ func bubble(array []int) []int {
 		}
 	}
 	return array
-}
-
-func main() {
-	array := []int{7, 32, 25, 9, 3}
-	fmt.Println(bubble(array))
 }
